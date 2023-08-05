@@ -13,8 +13,9 @@ class Application extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Soraya'),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 233, 233, 190),
         appBar: _getAppBar(),
-        //body: ,
+        body: _getMainContect(),
       ),
     );
   }
@@ -32,6 +33,42 @@ class Application extends StatelessWidget {
             fontSize: 19.0,
             color: Color.fromARGB(255, 255, 255, 255)),
       ),
+    );
+  }
+
+  Widget _getMainContect() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [_getheader()],
+      ),
+    );
+  }
+
+  Widget _getheader() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(height: 10),
+        Center(
+          child: CircleAvatar(
+            backgroundImage: AssetImage('images/profile.jpg'),
+            radius: 80.0,
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(
+          " (((': سلام من محمدامینم برنامه نویس جونیور فلانر",
+          textDirection: TextDirection.ltr,
+          style: TextStyle(fontWeight: FontWeight.w400),
+        ),
+        SizedBox(height: 10),
+        Text(
+          'من عاشق مباحث کامپیوتر و برنامه نویس و تِک هستم',
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.w300),
+        )
+      ],
     );
   }
 }
