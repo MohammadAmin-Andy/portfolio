@@ -63,12 +63,41 @@ class Application extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          'من عاشق مباحث کامپیوتر و برنامه نویس و تِک هستم',
+          'من علاقه مند به مباحث کامپیوتر، برنامه نویس و تِک هستم',
           textDirection: TextDirection.ltr,
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w300),
-        )
+        ),
+        SizedBox(height: 15),
+        SizedBox(height: 15),
+        _getSkills(),
+        SizedBox(height: 15),
       ],
     );
   }
+}
+
+Widget _getSkills() {
+  var skill_list = ['flutter'];
+  return Wrap(
+    children: [
+      for (var skill in skill_list)
+        Card(
+          elevation: 10,
+          shadowColor: Color.fromARGB(255, 3, 146, 255),
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset(
+                  'images/$skill.png',
+                  height: 120,
+                  width: 120,
+                ),
+              ),
+              Text('$skill')
+            ],
+          ),
+        ),
+    ],
+  );
 }
