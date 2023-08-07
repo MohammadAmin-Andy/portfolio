@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(Application());
@@ -69,6 +69,7 @@ class Application extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.w300),
         ),
         SizedBox(height: 15),
+        _getIcons(),
         SizedBox(height: 15),
         _getSkills(),
         SizedBox(height: 15),
@@ -78,7 +79,7 @@ class Application extends StatelessWidget {
 }
 
 Widget _getSkills() {
-  var skill_list = ['flutter'];
+  var skill_list = ['Dart', 'Flutter'];
   return Wrap(
     children: [
       for (var skill in skill_list)
@@ -98,6 +99,37 @@ Widget _getSkills() {
             ],
           ),
         ),
+    ],
+  );
+}
+
+Widget _getIcons() {
+  return Wrap(
+    children: [
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/github.png'),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/linkedin.png'),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/gmail.png'),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/telegram.png'),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/twitter.png'),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: Image.asset('icons/spotify.png'),
+      ),
     ],
   );
 }
