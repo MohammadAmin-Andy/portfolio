@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(Application());
@@ -107,28 +108,70 @@ Widget _getIcons() {
   return Wrap(
     children: [
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () {
+          launchUrl(Uri.parse('https://github.com/MohammadAmin-Andy'),
+              mode: LaunchMode.inAppWebView);
+        },
         icon: Image.asset('icons/github.png'),
+        splashColor: Colors.black,
       ),
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () async {
+          const url =
+              'https://www.linkedin.com/in/mohammad-amin-amirkolaei-andy-588448239/'; //flutter.dev");
+          await launch(url);
+        },
         icon: Image.asset('icons/linkedin.png'),
+        splashColor: Color.fromARGB(255, 0, 74, 135),
       ),
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () async {
+          const url = 'pg.mohammadmain@gmail.com'; //flutter.dev");
+          await launch(url);
+        },
         icon: Image.asset('icons/gmail.png'),
+        splashColor: Color.fromARGB(255, 195, 7, 7),
       ),
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () async {
+          const url = 'https://t.me/real_Mamin'; //flutter.dev");
+          await launch(url);
+        },
         icon: Image.asset('icons/telegram.png'),
+        splashColor: Color.fromARGB(255, 16, 116, 198),
       ),
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () async {
+          const url = 'https://twitter.com/MohammadAmin_pg'; //flutter.dev");
+          await launch(url);
+        },
         icon: Image.asset('icons/twitter.png'),
+        splashColor: Color.fromARGB(255, 16, 116, 198),
       ),
       IconButton(
-        onPressed: () {},
+        splashRadius: 25,
+        onPressed: () async {
+          const url =
+              'https://join.skype.com/invite/g0b7X6fUIJ6u'; //flutter.dev");
+          await launch(url);
+        },
+        icon: Image.asset('icons/skype.png'),
+        splashColor: Color.fromARGB(255, 5, 112, 227),
+      ),
+      IconButton(
+        splashRadius: 25,
+        onPressed: () async {
+          const url =
+              'https://open.spotify.com/user/31nzb5buqmpfyxtcusyqvajoxunu'; //flutter.dev");
+          await launch(url);
+        },
         icon: Image.asset('icons/spotify.png'),
+        splashColor: Color.fromARGB(255, 45, 214, 7),
       ),
     ],
   );
