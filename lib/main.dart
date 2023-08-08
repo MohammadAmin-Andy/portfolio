@@ -74,6 +74,7 @@ class Application extends StatelessWidget {
         SizedBox(height: 15),
         _getSkills(),
         SizedBox(height: 15),
+        _getresume()
       ],
     );
   }
@@ -173,6 +174,50 @@ Widget _getIcons() {
         icon: Image.asset('icons/spotify.png'),
         splashColor: Color.fromARGB(255, 45, 214, 7),
       ),
+    ],
+  );
+}
+
+Widget _getresume() {
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+    width: double.infinity,
+    color: Color.fromARGB(255, 162, 159, 159),
+    child: Column(
+      children: [
+        Text(
+          ':درباره‌ی من',
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+        ),
+        _gethistory()
+      ],
+    ),
+  );
+}
+
+Widget _gethistory() {
+  var list = [
+    'دانشجوی مهندسی کامپیوتر',
+    'python, C, C++ تسلط نسبی به زبان های',
+    'در حال یادگیری دوره فلاتر با استاد امیراحمدادیبی'
+  ];
+
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.end,
+    children: [
+      SizedBox(
+        width: double.infinity,
+        height: 20,
+      ),
+      for (var history in list)
+        Text(
+          '$history',
+          textDirection: TextDirection.ltr,
+          style:
+              TextStyle(fontWeight: FontWeight.w300, fontSize: 15, height: 2),
+        )
     ],
   );
 }
