@@ -24,7 +24,7 @@ class Application extends StatelessWidget {
   PreferredSizeWidget _getAppBar() {
     return AppBar(
       backgroundColor: Color.fromARGB(255, 29, 81, 14),
-      elevation: 10,
+      elevation: 20,
       centerTitle: true,
       title: Text(
         'درباره‌ی محمدامین امیرکلائی اندی',
@@ -74,7 +74,9 @@ class Application extends StatelessWidget {
         SizedBox(height: 15),
         _getSkills(),
         SizedBox(height: 15),
-        _getresume()
+        _getresume(),
+        SizedBox(height: 15),
+        _donationIcon()
       ],
     );
   }
@@ -151,8 +153,8 @@ Widget _getIcons() {
           const url = 'https://twitter.com/MohammadAmin_pg'; //flutter.dev");
           await launch(url);
         },
-        icon: Image.asset('icons/twitter.png'),
-        splashColor: Color.fromARGB(255, 16, 116, 198),
+        icon: Image.asset('icons/X.jpg'),
+        splashColor: Colors.black,
       ),
       IconButton(
         splashRadius: 25,
@@ -218,6 +220,38 @@ Widget _gethistory() {
           style:
               TextStyle(fontWeight: FontWeight.w300, fontSize: 15, height: 2),
         )
+    ],
+  );
+}
+
+Widget _donationIcon() {
+  return Wrap(
+    spacing: double.maxFinite,
+    children: [
+      SizedBox(
+        width: 250,
+        height: 50,
+        child: IconButton(
+          //splashRadius: 25,
+          onPressed: () {
+            launchUrl(Uri.parse('http://www.coffeete.ir/Mamin'),
+                mode: LaunchMode.inAppWebView);
+          },
+          icon: Image.asset('icons/coffee.png'),
+          splashColor: Color.fromARGB(255, 104, 57, 40),
+        ),
+      ),
+
+//      IconButton(
+//        splashRadius: 25,
+//        onPressed: () async {
+//          const url =
+//              'https://www.linkedin.com/in/mohammad-amin-amirkolaei-andy-588448239/'; //flutter.dev");
+//          await launch(url);
+//        },
+//        icon: Image.asset('icons/star.png'),
+//        splashColor: Color.fromARGB(255, 217, 171, 5),
+//      ),
     ],
   );
 }
