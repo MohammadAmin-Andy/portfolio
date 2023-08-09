@@ -225,8 +225,7 @@ Widget _gethistory() {
 }
 
 Widget _donationIcon() {
-  return Wrap(
-    spacing: double.maxFinite,
+  return Column(
     children: [
       SizedBox(
         width: 250,
@@ -241,17 +240,29 @@ Widget _donationIcon() {
           splashColor: Color.fromARGB(255, 104, 57, 40),
         ),
       ),
-
-//      IconButton(
-//        splashRadius: 25,
-//        onPressed: () async {
-//          const url =
-//              'https://www.linkedin.com/in/mohammad-amin-amirkolaei-andy-588448239/'; //flutter.dev");
-//          await launch(url);
-//        },
-//        icon: Image.asset('icons/star.png'),
-//        splashColor: Color.fromARGB(255, 217, 171, 5),
-//      ),
+      SizedBox(height: 15),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+            iconSize: 50,
+            alignment: Alignment.center,
+            splashRadius: 40,
+            onPressed: () async {
+              const url = ''; //flutter.dev");
+              await launch('https://github.com/MohammadAmin-Andy/profolito');
+            },
+            icon: Image.asset('icons/star.png'),
+            splashColor: Color.fromARGB(255, 217, 171, 5),
+          ),
+        ],
+      ),
+      Text(
+        'star to this project !!🎉🎉',
+        textDirection: TextDirection.ltr,
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
+      ),
+      SizedBox(height: 10)
     ],
   );
 }
