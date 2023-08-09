@@ -1,8 +1,7 @@
-![1_1](https://github.com/MohammadAmin-Andy/profolito/assets/113265902/348babd1-7d79-480f-ac97-d38d0f160d3e)# profolito
-
+# Subject
 This is a simple application for displaying a resume
 
-# photos
+# Images
 ![1_0](https://github.com/MohammadAmin-Andy/profolito/assets/113265902/6176422d-dd43-4566-953a-ca81ae2941d4)
 ![1_1](https://github.com/MohammadAmin-Andy/profolito/assets/113265902/9b15d231-9238-4213-98cc-ceeb6a5e85d4)
 
